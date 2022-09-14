@@ -21,7 +21,45 @@ void InsertTel(){
     idx++;
     printf("등록 완료");
 }
-
+void SearchTel(){
+    char str[11];
+    printf("검색할 이름 입력 : ");
+    scanf("%s",str);
+    for(int i=0;i<idx;i++){
+        if(strcmp(arr[i].name,str) == 0){
+            printf("%s %d\n",arr[i].name, arr[i].telnum);
+            return;
+        }
+    }
+    printf("검색 결과가 없습니다.\n");
+}
+void DeleteTel(){
+    char str[11];
+    printf("삭제할 이름 입력 : ");
+    scanf("%s",str);
+    for(int i=0;i<idx;i++){
+        if(strcmp(arr[i].name,str) == 0){
+            for(int j=i;j<idx-1;j++)
+                arr[j] = arr[j+1];
+            idx--;
+            return;
+        }
+    }
+    printf("삭제할 데이터가 없습니다.\n");
+}
+void UpdateTel(){
+    char str[11];
+    printf("수정할 이름 입력 : ");
+    scanf("%s",str);
+    for(int i=0;i<idx;i++){
+        if(strcmp(arr[i].name,str) == 0){
+            printf("수정할 번호 입력 : ");
+            scanf("%d",arr[i].telnum);
+            return;
+        }
+    }
+    printf("검색 결과가 없습니다.\n");
+}
 
 int main(void) {
     int no=0;
