@@ -1,1 +1,3 @@
-1. 기본 열거형 상수(insert = 1, search = 2, delete = 3, update = 4) 정의
+1. 기본 열거형 상수(insert = 1, search = 2, delete = 3, update = 4)
+2. 연락처 구조체, 배열(10건), 명령어 입력 받음, 열거형상수 quit(5) 추가
+3. 연락처 등록 추가
